@@ -7,12 +7,18 @@ const Entry = styled.span`
   color: pink;
 `
 
-const ProjectListEntry = () =>{
+const ProjectListEntry = (props) => {
+  const { data } = props;
   return (
     <div>
-      <div> {thumbnail} </div>
-      <div> {title} </div>
-      <div> {description} </div>
+      <Entry>
+        <div> 
+          {data.title} 
+        </div>
+        <div> 
+          {data.description} 
+        </div>
+      </Entry>
     </div>
   )
 }

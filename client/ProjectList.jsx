@@ -1,9 +1,12 @@
 import React from 'react';
-
-const ProjectList = () => {
-  return (
+import ProjectListEntry from './ProjectListEntry.jsx'
+const ProjectList = (props) => {
+  const data = props.data;
+    return (
     <div>
-    HERE I AM!
+    {data.map((project) =>
+        <ProjectListEntry data={ project }/>
+      )}
     </div>
   )
 };
